@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Luckiest+Guy&display=swap');
 
+
+html {
+  scroll-behavior: smooth;
+} 
+
 :root{
     --roxo: #8500c7;
     --roxo2: #a529e3;
@@ -142,7 +147,7 @@ section.ondas-box {
     height: 100px;
     position: absolute;
     bottom: 0;
-    background-image: url(img/wave.png);
+    background-image: url(../img/wave.png);
     background-size: 1000px 100px;
 
     animation: ondaAnimada 5s ease-in-out infinite alternate;
@@ -192,7 +197,8 @@ section.ondas-box {
 
 .sobre-jogo {
   padding: 50px 0;
-  background-color: #ffffff; 
+  background-color: #ffffff;
+  margin-bottom: 2%; 
 }
 
 .titulo {
@@ -205,7 +211,7 @@ section.ondas-box {
 .container-jogo {
   max-width: 1300px;
   margin: 0 auto;
-  background: var(--roxo);
+  background: linear-gradient(145deg, #371570, #8500c7);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -249,12 +255,162 @@ section.ondas-box {
   }
 }
 
+/* Escolha o seu jogo */
 
+.escolhasec{
+    padding: 50px 0;
+    background:linear-gradient(to bottom,  #8500c7,#371570);
 
+}
+
+.titulo2{
+    font-family: "Luckiest Guy", cursive;
+    font-size: 50px;
+    color: white;
+    margin: 10px 0;
+    text-shadow: 3px 3px #bca1ca;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.container-jogo2 {
+  max-width: 1300px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 1%;
+}
+
+.container-jogo2 .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container-jogo2 .col p{
+    text-align: left;
+    font-size: 17px;
+    color: black;
+}
+
+.container-jogo2 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px;
+}
+
+.container-jogo2 .col p{
+    text-align: left;
+    font-size: 17px;
+}
+
+.flutuar2 {
+  animation: flutuar 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.card-title{
+    font-family: "Luckiest Guy", cursive;
+    font-size: 30px;
+    color: var(--roxo);
+    text-shadow: 3px 3px #bca1ca;
+    letter-spacing: 2px;
+    text-align: center;
+    
+}
+
+.jogabtn{
+    color:white;
+    background-color: #8500c7;
+
+}
+
+.jogabtn:hover{
+    color:white;
+    background-color: #5d008b;
+
+}
+
+.onda-top {
+  position: absolute;
+  top: -100px; 
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10; 
+  background:  #8500c7;
+
+}
+
+.onda-top svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* sobre o grupo */
+
+.sobre-grupo {
+  padding: 50px 0;
+  background-color: #ffffff;
+  margin-bottom: 7%; 
+}
+
+.grupo-fotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.foto-circulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px; /* igual ao tamanho da imagem */
+}
+
+.foto-circulo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #8500c7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.foto-circulo img:hover {
+  transform: scale(1.1);
+}
+
+.foto-circulo p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
 
 /* medias */
 
 @media (max-width: 800px) {
+
     .main-title {
         font-size: 40px;
     }
@@ -269,7 +425,40 @@ section.ondas-box {
 
     .btn-resp{
         display: flex;
+    } 
+
+    .container-jogo,
+    .container {
+        max-width: 90% !important;
+        padding: 20px !important;
+        margin: 0 auto 40px auto !important;
     }
 
-   
+    .container-jogo .row,
+    .escolhasec .row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .container-jogo .col,
+    .escolhasec .col-md-6 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        text-align: center !important;
+    }
+
+    .container-jogo p,
+    .escolhasec p {
+        text-align: center !important;
+        font-size: 16px !important;
+    }
+
+    .container-jogo img,
+    .escolhasec img {
+        max-width: 100% !important;
+    }
+
+
 }
+
